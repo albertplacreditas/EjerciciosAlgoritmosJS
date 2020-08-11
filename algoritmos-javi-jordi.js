@@ -7,9 +7,9 @@ function palindrome(word) {
 
     return cleanWord === reverseWord
 }
+
 function countWords(str) {
-    //sentence = str.replace(/[^a-zA-Z]+/,'').toLowerCase()
-    words = str.toLowerCase().split(" ")
+    words = str.replace(/[^a-zA-Z ]+/g,'').toLowerCase().split(" ")
     result = {}
     
     words.map((word)=>{
@@ -24,6 +24,22 @@ function countWords(str) {
     return result;
 }
 
-resultado1= palindrome("rec!!)on23.oCER")
+function countWords(str) {
+    words = str.replace(/[^a-zA-Z] +/,'').toLowerCase().split(" ")
+    result = {}
+    
+    words.map((word)=>{
+        if(result[word]){
+            result[word]++
+        }
+        else {
+            result[word] = 1
+        }
+        
+    })
+    return result;
+}
+
+resultado1 = palindrome("rec!!)on23.oCER")
 console.log("Ejercicio 1 : " + resultado1) 
 console.log(countWords("Doo bee doo bee doo"))
