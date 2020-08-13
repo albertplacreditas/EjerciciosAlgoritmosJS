@@ -133,4 +133,22 @@ function missingNumbers(arr, brr) {
 
 // Ejercicio 7 - Halloween Sale
 
-// Ejercicio 8 - KnightL on a Chessboard
+function  howManyGames (firstPre, descuento, minPre, dinero) {
+    var countJuegos = 0;
+    var valorJuego = firstPre;
+
+    while (dinero >= valorJuego) {
+
+            dinero = dinero-valorJuego
+            countJuegos +=1
+            valorJuego = firstPre - (countJuegos * descuento)
+            
+            if((valorJuego) <= minPre) {
+                valorJuego = minPre
+            }
+    }
+
+    return countJuegos
+}
+
+// Ejercicio 8 - KnightL on a Chessboar
