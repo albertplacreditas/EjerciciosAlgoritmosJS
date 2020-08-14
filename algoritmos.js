@@ -151,4 +151,26 @@ function  howManyGames (firstPre, descuento, minPre, dinero) {
     return countJuegos
 }
 
-// Ejercicio 8 - KnightL on a Chessboar
+// Ejercicio 8 - Quicksort 1 - Partition
+
+function quickSort(arr) {
+    var p = arr[0]
+    var left = []
+    var rigth = []
+    var equal = []
+    for(let i =0; i<arr.length; i++){
+            if(arr[i] === p){
+                equal.push(arr[i])
+            }
+            else if(arr[i]>p){
+                     rigth.push(arr[i])
+            }
+                else{
+                    left.push(arr[i])
+                }
+
+    }
+    var result = left.concat(equal).concat(rigth)
+    return result;
+
+}
